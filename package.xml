@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>pozyx_driver</name>
+  <version>0.0.1</version>
+  <description>Pozyx ROS2 driver</description>
+  <maintainer email="xisco.bonnin@uib.es">Francisco Bonnin-Pascual</maintainer>
+  <license>TODO</license>
+  <author email="xisco.bonnin@uib.es">Francisco Bonnin-Pascual</author>
+  
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>uwb_msgs</depend>
+  <depend>python-pypozyx-pip</depend>
+  <depend>ros2launch</depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+  
+  
+  
+</package>
