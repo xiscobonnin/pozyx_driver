@@ -302,12 +302,14 @@ class PozyxDriverNode(Node):
         self.get_logger().info(f'Anchors found: {list_size[0]}')
         for i in range(list_size[0]):
             anchor_coordinates = Coordinates()
-            status = self.pozyx.getDeviceCoordinates(device_list[i], anchor_coordinates)
-            if status == POZYX_SUCCESS:
-                self.get_logger().info(f'ANCHOR,0x{device_list[i]:0.4x}, {anchor_coordinates}')
-            else:
-                self.get_logger().warning(f'Unable to read coordinates for anchor 0x{device_list[i]:0.4x}')
 
+            status = self.pozyx.getDeviceCoordinates(device_list[i], anchor_coordinates)
+
+            if status == POZYX_SUCCESS:
+                # self.get_logger().info(f'ANCHOR,0x{device_list[i]:0.4x}, {anchor_coordinates}')
+                self.get_logger().info(f"ANCHOR,0x%0.4x, %s" % (device_list[i], str(anchor_coordinates)))
+            # else:
+            #     self.get_logger().warning(f'Unable to read coordinates for anchor 0x{device_list[i]:0.4x}')
 
 def main(args=None):
     rclpy.init(args=args)
