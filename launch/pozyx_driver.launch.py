@@ -20,14 +20,15 @@ def generate_launch_description():
                 'world_frame_id': 'world',
                 'tag_frame_id': 'pozyx_tag',
                 'do_ranging_attempts': 1,
+                #anchors coordinates in mm
                 'anchor0_id': '0x673D',
-                'anchor0_coordinates': '[1, 2, 3]',
+                'anchor0_coordinates': '[1000, 2000, 3000]',
                 'anchor1_id': '0x683D',
-                'anchor1_coordinates': '[4, 5, 6]',
+                'anchor1_coordinates': '[4000, 5000, 6000]',
                 'anchor2_id': '0x6A39',
-                'anchor2_coordinates': '[1, 3, 2]',
+                'anchor2_coordinates': '[1000, 3000, 2000]',
                 'anchor3_id': '0x6842',
-                'anchor3_coordinates': '[3, 2, 1]',
+                'anchor3_coordinates': '[3000, 2000, 1000]',
             }]
         )
     ])
